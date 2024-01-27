@@ -1,5 +1,5 @@
 #!/bin/bash
-
+xrdb -merge ~/.Xresources
 /home/ogge/repos/dwm-ogglord/scripts/status &
 /usr/bin/lxpolkit &
 /usr/bin/synergy &

@@ -26,6 +26,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
+  "xrdb", "-merge", "~/.Xresources", NULL,
   "xsetroot", "-cursor_name", "left_ptr", NULL,
   "xset", "s", "off", NULL,
   "xset", "s", "noblank", NULL,
@@ -52,13 +53,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class    	 instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "alacritty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "kitty",       NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,          NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
-/* layout(s) */
+/* xrdb -merge ~/.Xresourceslayout(s) */
 static const float mfact     = 0.75; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
@@ -70,7 +71,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
-
+fsdfdsffdsf
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
