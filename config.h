@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
-
+ fail here please!!
 static const char *const autostart[] = {
   "xrdb", "-merge", "~/.Xresources", NULL,
   "xsetroot", "-cursor_name", "left_ptr", NULL,
@@ -71,7 +71,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
-fsdfdsffdsf
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
