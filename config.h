@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
- fail here please!!
+
 static const char *const autostart[] = {
   "xrdb", "-merge", "~/.Xresources", NULL,
   "xsetroot", "-cursor_name", "left_ptr", NULL,
@@ -32,12 +32,12 @@ static const char *const autostart[] = {
   "xset", "s", "noblank", NULL,
   "xset", "-dkms", NULL,
   "dbus-update-activation-environment", "--systemd", "--all", NULL,
+  "feh", "--bg-max", "$HOME/nix/pictures/lava.png", NULL,
   "flameshot", NULL,
-  "lxpolkit", NULL,
   "dunst", NULL,
   "picom", NULL,
   "sh", "-c", "$HOME/repos/dwm-ogglord/scripts/status", NULL,
-  "feh", "--bg-max", "$HOME/nix/pictures/lava.png", NULL,
+
   NULL /* terminate */
 };
 

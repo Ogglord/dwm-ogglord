@@ -301,7 +301,7 @@ static const char autostartblocksh[] = "autostart_blocking.sh";
 static const char autostartsh[] = "autostart.sh";
 static Systray *systray = NULL;
 static const char broken[] = "broken";
-static const char dwmdir[] = "github/dwm-titus/scripts";
+static const char dwmdir[] = "repos/dwm-ogglord/scripts";
 static const char localshare[] = "";
 static char stext[256];
 static int screen;

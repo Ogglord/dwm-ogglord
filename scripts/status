@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Initialize
 printf "$$" > ~/.cache/pidofbar
@@ -34,7 +34,7 @@ update_bat() {
 }
 
 update_vol() {
-  vol="奄 $(pactl list sinks | awk '/Volume:/ {print $5}' | head -n 1 | tr -d '%')%"
+  vol="$(pactl list sinks | awk '/Volume:/ {print $5}' | head -n 1 | tr -d '%')%"
 }
 
 update_backlight() {
@@ -63,8 +63,8 @@ trap "update_backlight; display" "RTMIN+1"
 trap "update_bat; display" "RTMIN+2"
 
 # Initial updates
-update_vol
-update_backlight
+#update_vol
+#update_backlight
 
 # Main loop
 while true; do
@@ -74,7 +74,7 @@ while true; do
     0) update_bat;;
     [1-5]) 
       update_time
-      update_vol
+      #update_vol
       display
       ;;
   esac
